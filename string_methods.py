@@ -22,7 +22,7 @@ print('*'.join(banner))
 # Remove whitespace from the beginning
 print(banner.strip())
 
-# Split hte iterable, creating a list using the separtor in .split(separator)
+# Split hte iterable, creating a list using the separator in .split(separator)
 print(banner.split(" "))
 
 # Return True if all characters are digits
