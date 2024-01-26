@@ -5,7 +5,7 @@
 import tkinter as tk
 from tkinter import ttk
 
-# Create a instance of Tk class
+# Create an instance of Tk class
 win = tk.Tk()
 
 # Add title

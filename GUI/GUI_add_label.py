@@ -7,7 +7,7 @@
 import tkinter as tk
 from tkinter import ttk # import ttk module from tkinter package
 
-# Create a instance of Tk class
+# Create an instance of Tk class
 win = tk.Tk()
 
 # Create a title in GUI
