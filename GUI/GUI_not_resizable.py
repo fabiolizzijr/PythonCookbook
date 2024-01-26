@@ -4,7 +4,7 @@
 # =========================
 import tkinter as tk
 
-# Create an instance of class Tk
+# Create a instance of class Tk
 window = tk.Tk()
 
 # Set a title
