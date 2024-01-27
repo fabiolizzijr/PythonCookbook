@@ -24,6 +24,7 @@ name = tk.StringVar()
 name_entered = ttk.Entry(win, width=12, textvariable=name)
 name_entered.grid(column=0, row=1)
 
+# Create action_bt Button
 action_bt = ttk.Button(win, text="Click me!", command=click_me)
 action_bt.grid(column=1, row=1)
 
