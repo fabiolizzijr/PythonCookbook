@@ -40,15 +40,15 @@ number_chosen.grid(column=1, row=1)
 number_chosen.current(0) # First value of the tuple as default value
 
 # Add 3 Checkbox
-chVarDis = tk.IntVar()
+chVarDis = tk.IntVar() # The variable is int because by default is 0 or 1
 check1 = tk.Checkbutton(win, text="Disabled", variable=chVarDis, state='disabled')
 check1.select()
-check1.grid(column=0, row=4, sticky=tk.W)
+check1.grid(column=0, row=4, sticky=tk.W) # sticky to W set to the left
 
-chVarUn = tk.IntVar()
+chVarUn = tk.IntVar() # The variable is 0=unchecked or 1=checked
 check2 = tk.Checkbutton(win, text="UnChecked", variable=chVarUn)
 check2.deselect()
-check2.grid(column=1, row=4, sticky=tk.W)
+check2.grid(column=1, row=4, sticky=tk.W) # W stand for West
 
 chVarEn = tk.IntVar()
 check3 = tk.Checkbutton(win, text="Enabled", variable=chVarEn)
