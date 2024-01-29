@@ -1,4 +1,4 @@
-# GUI with checkbox widget example
+# GUI with Radiobutton widget example
 #=================================
 # Imports
 #=================================
@@ -9,7 +9,7 @@ from tkinter import ttk
 win = tk.Tk()
 
 # Add a title
-win.title('GUI with Checkbox')
+win.title('GUI with Radiobutton')
 
 # Set up size window
 win.geometry('350x300')
@@ -55,6 +55,32 @@ check3 = tk.Checkbutton(win, text="Enabled", variable=chVarEn)
 check3.select()
 check3.grid(column=2, row=4, sticky=tk.W)
 
+# Radiobutton Globals
+# Assign tkinter keywords = symbolic names to the variables
+COLOR1 = 'Blue'
+COLOR2 = 'Gold'
+COLOR3 = 'Red'
+
+# Radiobutton Callback
+def radCall():
+    radSel = radVar.get()
+    if   radSel == 1: win.configure(background=COLOR1)
+    elif radSel == 2: win.configure(background=COLOR2)
+    elif radSel == 3: win.configure(background=COLOR3)
+
+# Create three Radiobuttons with one variable
+# Because they are all using the same variable
+# When you select one, it deselect the others!
+radVar = tk.IntVar()
+
+rad1 = tk.Radiobutton(win, text=COLOR1, variable=radVar, value=1, command=radCall)
+rad1.grid(column=0, row=5, sticky=tk.W, columnspan=3)
+
+rad2 = tk.Radiobutton(win, text=COLOR2, variable=radVar, value=2, command=radCall)
+rad2.grid(column=1, row=5, sticky=tk.W, columnspan=3)
+
+rad3 = tk.Radiobutton(win, text=COLOR3, variable=radVar, value=3, command=radCall)
+rad3.grid(column=2, row=5, sticky=tk.W, columnspan=3)
 
 # Set focus into name Entry
 name_entered.focus()
